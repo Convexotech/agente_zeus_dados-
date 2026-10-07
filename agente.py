@@ -1,10 +1,15 @@
 from groq import Groq
 import streamlit as st
+from dotenv import load_dotenv
+import os
 
 
-st.title('AGENTE NALISTA DE DADOS 🎲 ')
+load_dotenv()
 
-client  = Groq(api_key = '')
+st.title("AGENTE ANALISTA DE DADOS 🎲")
+
+
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 
 print('----------------------------')
